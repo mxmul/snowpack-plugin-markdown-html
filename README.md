@@ -27,7 +27,7 @@ Then add this plugin to your Snowpack config:
 
 | Name        | Type                         | Description                                                                                                                   |
 | ----------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `render` | `({html: string, frontmatter: Object, markdown: string, loadOptions: PluginLoadOptions, markChanged: () => void}) => string` | (optional) Custom render function. `markChanged` can be used to bust Snowpack's cache of the `.md` file, e.g. if a layout file has changed. |
+| `render` | `({html: string, frontmatter: Object, markdown: string, loadOptions: PluginLoadOptions, markChanged: () => void}) => string` | (optional) Custom render function. *`markChanged` can be used to bust Snowpack's cache of the `.md` file, e.g. if a layout file has changed.* |
 | `parseOptions` | `Object` | (optional) See https://github.com/rsms/markdown-wasm#api |
 
 
