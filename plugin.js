@@ -1,20 +1,13 @@
 const fs = require('fs');
 const grayMatter = require('gray-matter');
 const { parse } = require('markdown-wasm');
+const defaultRender = require('./render/default');
+const nunjucksRender = require('./render/nunjucks');
 
-function defaultRender({ frontmatter, html }) {
-  return `
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <title>${frontmatter.title || ''}</title>
-      </head>
-      <body>
-      ${html}
-      </body>
-    </html>
-  `;
-}
+const namedRenderers = {
+  default: defaultRender,
+  nunjucks: nunjucksRender,
+};
 
 module.exports = function (snowpackConfig, options) {
   return {
@@ -25,7 +18,12 @@ module.exports = function (snowpackConfig, options) {
     },
     async load(loadOptions) {
       const { filePath } = loadOptions;
-      const { parseOptions = {}, render = defaultRender } = options;
+      const { parseOptions = {} } = options;
+
+      let { render = "default" } = options;
+      if (render in namedRenderers) {
+        render = namedRenderers[render];
+      }
 
       const source = fs.readFileSync(filePath);
 

@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "gray-matter": "^4.0.2",
-    "markdown-wasm": "^1.1.2"
+    "markdown-wasm": "^1.1.2",
+    "snowpack-plugin-nunjucks": "^0.0.3"
   },
   "devDependencies": {
     "husky": "^4.3.6",
