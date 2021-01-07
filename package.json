@@ -1,7 +1,7 @@
 {
   "name": "snowpack-plugin-markdown-html",
   "description": "Use markdown-wasm to build .md files to HTML.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "plugin.js",
   "license": "MIT",
   "homepage": "https://github.com/mxmul/snowpack-plugin-markdown-html/blob/master/README.md",
@@ -12,6 +12,7 @@
   "dependencies": {
     "gray-matter": "^4.0.2",
     "markdown-wasm": "^1.1.2",
+    "nunjucks": "^3.2.2",
     "snowpack-plugin-nunjucks": "^0.0.3"
   },
   "devDependencies": {
