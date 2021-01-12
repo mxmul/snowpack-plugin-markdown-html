@@ -1,12 +1,12 @@
 const fs = require('fs');
 const grayMatter = require('gray-matter');
 const { parse } = require('markdown-wasm');
-const defaultRender = require('./render/default');
-const nunjucksRender = require('./render/nunjucks');
 
+// Lazily import named renderers, because they may have optional
+// peer dependencies (e.g. nunjucks)
 const namedRenderers = {
-  default: defaultRender,
-  nunjucks: nunjucksRender,
+  default: () => require('./render/default'),
+  nunjucks: () => require('./render/nunjucks'),
 };
 
 module.exports = function (snowpackConfig, options) {
@@ -20,9 +20,9 @@ module.exports = function (snowpackConfig, options) {
       const { filePath } = loadOptions;
       const { parseOptions = {} } = options;
 
-      let { render = "default" } = options;
+      let { render = 'default' } = options;
       if (render in namedRenderers) {
-        render = namedRenderers[render];
+        render = namedRenderers[render]();
       }
 
       const source = fs.readFileSync(filePath);

@@ -1,5 +1,7 @@
+const { stripIndent } = require('common-tags');
+
 function render({ frontmatter, html }) {
-  return `
+  return stripIndent`
     <!DOCTYPE html>
     <html>
     <head>
