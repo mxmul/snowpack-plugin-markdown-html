@@ -1,0 +1,13 @@
+{
+  "name": "nunjucks",
+  "private": true,
+  "scripts": {
+    "start": "snowpack dev"
+  },
+  "dependencies": {
+    "nunjucks": "^3.2.2",
+    "snowpack": "next",
+    "snowpack-plugin-markdown-html": "workspace:plugin",
+    "snowpack-plugin-nunjucks": "^0.0.3"
+  }
+}

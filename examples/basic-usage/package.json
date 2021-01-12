@@ -1,0 +1,11 @@
+{
+  "name": "basic-usage",
+  "private": true,
+  "scripts": {
+    "start": "snowpack dev"
+  },
+  "dependencies": {
+    "snowpack": "next",
+    "snowpack-plugin-markdown-html": "workspace:plugin"
+  }
+}

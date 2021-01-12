@@ -1,0 +1,8 @@
+{
+  "mount": {
+      "src": "/"
+   },
+  "plugins": [
+    "snowpack-plugin-markdown-html"
+  ]
+}
