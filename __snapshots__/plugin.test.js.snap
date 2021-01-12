@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snowpack-plugin-markdown-html examples ./examples/basic-usage emits expected index.html 1`] = `
+"<!DOCTYPE html>
+    <html>
+    <head>
+        <title>Markdown Basic Usage</title>
+    </head>
+    <body>
+    <h1><a id=\\"heading\\" class=\\"anchor\\" aria-hidden=\\"true\\" href=\\"#heading\\"></a>Heading</h1>
+<h2><a id=\\"sub-heading\\" class=\\"anchor\\" aria-hidden=\\"true\\" href=\\"#sub-heading\\"></a>Sub-heading</h2>
+<p>Paragraphs are separated
+by a blank line.</p>
+<p>Two spaces at the end of a line<br>
+produces a line break.</p>
+
+    </body>
+    </html>"
+`;
+
+exports[`snowpack-plugin-markdown-html examples ./examples/custom-render emits expected index.html 1`] = `
+"<!DOCTYPE html>
+          <html>
+          <head>
+              <title>Markdown Basic Usage</title>
+              <style>
+              html, body {
+                background-color: yellow;
+                font-family: 'Comic Sans MS';
+              }
+              </style>
+          </head>
+          <body>
+            <h1><a id=\\"heading\\" class=\\"anchor\\" aria-hidden=\\"true\\" href=\\"#heading\\"></a>Heading</h1>
+<h2><a id=\\"sub-heading\\" class=\\"anchor\\" aria-hidden=\\"true\\" href=\\"#sub-heading\\"></a>Sub-heading</h2>
+<p>Paragraphs are separated
+by a blank line.</p>
+<p>Two spaces at the end of a line<br>
+produces a line break.</p>
+
+          </body>
+          </html>"
+`;
+
+exports[`snowpack-plugin-markdown-html examples ./examples/nunjucks emits expected index.html 1`] = `
+"<!DOCTYPE html>
+<html>
+<head>
+    <title>Markdown Basic Usage</title>
+    <style>
+    html, body {
+        background-color: hotpink;
+    }
+    </style>
+</head>
+<body>
+<h1><a id=\\"heading\\" class=\\"anchor\\" aria-hidden=\\"true\\" href=\\"#heading\\"></a>Heading</h1>
+<h2><a id=\\"sub-heading\\" class=\\"anchor\\" aria-hidden=\\"true\\" href=\\"#sub-heading\\"></a>Sub-heading</h2>
+<p>Paragraphs are separated
+by a blank line.</p>
+<p>Two spaces at the end of a line<br>
+produces a line break.</p>
+
+</body>
+</html>
+"
+`;
